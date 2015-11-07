@@ -1,0 +1,52 @@
+﻿@model Conference.Models.Session
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h3>
+    @Model.Title
+</h3>
+<div>
+    @Model.Abstract
+</div>
+<div>
+    @Html.Action("_GetForSession", "Comment", new { sessionID = Model.SessionID })
+</div>
+
+@*<h2>Details</h2>
+
+<div>
+    <h4>Session</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Speaker.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Speaker.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Abstract)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Abstract)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SessionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
